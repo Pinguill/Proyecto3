@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cobra : MonoBehaviour
+public class cobra : Enemies
 {
+
+    public float vidaMax = 10;
     public float visionRadius;
     public float attackRadius;
     public float speed;
@@ -77,5 +79,15 @@ public class cobra : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, visionRadius);
         Gizmos.DrawWireSphere(transform.position, attackRadius);
+    }
+
+    public override float getVida()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override float getAttack()
+    {
+        throw new System.NotImplementedException();
     }
 }

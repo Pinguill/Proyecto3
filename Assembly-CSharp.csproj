@@ -59,6 +59,12 @@
     <Compile Include="Assets\player.cs" />
     <Compile Include="Assets\cobra.cs" />
     <Compile Include="Assets\Inventario.cs" />
+    <Compile Include="Assets\Enemies.cs" />
+    <Compile Include="Assets\Item.cs" />
+    <Compile Include="Assets\Slot.cs" />
+    <Compile Include="Assets\Espada.cs" />
+    <Compile Include="Assets\healthPotion.cs" />
+    <Compile Include="Assets\ManaPotion.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
