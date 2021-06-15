@@ -6,14 +6,24 @@ public class healthPotion : Item
 {
     private float vidaCurada;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         vidaCurada = 10;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
 
+    }
+
+    public void usePotion()
+    {
+
+    }
+
+    public override void use()
+    {
+        throw new System.NotImplementedException();
     }
 }

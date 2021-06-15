@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public abstract class Item : MonoBehaviour
 {
     public int ID;
     public string type;
@@ -11,4 +11,22 @@ public class Item : MonoBehaviour
 
     [HideInInspector]
     public bool pickedUp;
+
+    [HideInInspector]
+    public GameObject Potion;
+
+
+    public void itemUsage()
+    {
+        if( type == "Potion"){
+            if( ID == 2){
+                
+            }
+            else if(ID == 2){
+
+            }
+        }
+    }
+
+    public abstract void use();
 }
