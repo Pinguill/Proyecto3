@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class cobra : Enemies
 {
-
-    public float vidaMax = 10;
+    private bool FightEnabled;
+    public float vidaMax;
+    public float vida;
     public float visionRadius;
     public float attackRadius;
     public float speed;
+    public float attackDamage;
 
     GameObject player;
 
@@ -26,6 +28,7 @@ public class cobra : Enemies
 
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
+        vida = vidaMax;
     }
 
     // Update is called once per frame
@@ -72,6 +75,11 @@ public class cobra : Enemies
             anim.SetBool("walking", false);
         }
         Debug.DrawLine(transform.position, target, Color.green);
+
+        if(vida > vidaMax)
+        {
+            vida = vidaMax;
+        }
     }
 
     void OnDrawGizmos()
@@ -81,13 +89,19 @@ public class cobra : Enemies
         Gizmos.DrawWireSphere(transform.position, attackRadius);
     }
 
-    public override float getVida()
+    public bool takeDamage( float dmg )
     {
-        throw new System.NotImplementedException();
-    }
 
-    public override float getAttack()
-    {
-        throw new System.NotImplementedException();
+        Debug.Log("Take damage cobra: "+ dmg);
+        vida -= dmg;
+        if (vida <= 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
+    
 }

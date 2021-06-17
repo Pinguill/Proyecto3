@@ -7,9 +7,9 @@ public class Espada : Item
     private float attack;
     private float durability;
 
-    public override void use()
+    public override float use()
     {
-        throw new System.NotImplementedException();
+        return 8;
     }
 
     // Start is called before the first frame update

@@ -19,4 +19,6 @@ public class UICamera : MonoBehaviour
     {
         transform.position = new Vector3(player.position.x + xPos, player.position.y + yPos, zPos);
     }
+
+    
 }

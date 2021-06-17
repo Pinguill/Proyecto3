@@ -20,13 +20,15 @@ public abstract class Item : MonoBehaviour
     {
         if( type == "Potion"){
             if( ID == 2){
-                
+                healthPotion healthP = new healthPotion();
+                float vidaRepuesta = healthP.use();
             }
-            else if(ID == 2){
-
+            else if(ID == 3){
+                ManaPotion ManaP = new ManaPotion();
+                float manaRepuesta = ManaP.use();
             }
         }
     }
 
-    public abstract void use();
+    public abstract float use();
 }

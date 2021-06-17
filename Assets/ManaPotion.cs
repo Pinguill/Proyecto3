@@ -6,9 +6,9 @@ public class ManaPotion : Item
 {
     private float ManaRegenerado;
 
-    public override void use()
+    public override float use()
     {
-        throw new System.NotImplementedException();
+        return 15;
     }
 
     // Start is called before the first frame update

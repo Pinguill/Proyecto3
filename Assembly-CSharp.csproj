@@ -64,10 +64,11 @@
     <Compile Include="Assets\ManaPotion.cs" />
     <Compile Include="Assets\Inventario.cs" />
     <Compile Include="Assets\healthPotion.cs" />
+    <Compile Include="Assets\UICamera.cs" />
     <Compile Include="Assets\Enemies.cs" />
     <Compile Include="Assets\mainCamera.cs" />
-    <Compile Include="Assets\PlayerHealth.cs" />
-    <Compile Include="Assets\UICamera.cs" />
+    <Compile Include="Assets\FightButton.cs" />
+    <Compile Include="Assets\BattleState.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -22,8 +22,8 @@ public class healthPotion : Item
 
     }
 
-    public override void use()
+    public override float use()
     {
-        throw new System.NotImplementedException();
+        return 10;
     }
 }
