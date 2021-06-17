@@ -64,6 +64,16 @@ public class player : MonoBehaviour{
         }
     }
 
+    public void curarse( float vidaACurar )
+    {
+        health += vidaACurar;
+    }
+
+    public void danioExtra( float dmgExtra)
+    {
+        attackDamage += dmgExtra;
+    }
+
     public bool takeDamage(float dmg)
     {
         health -= dmg;

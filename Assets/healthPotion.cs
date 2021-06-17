@@ -17,13 +17,8 @@ public class healthPotion : Item
 
     }
 
-    public void usePotion()
-    {
-
-    }
-
     public override float use()
     {
-        return 10;
+        return 20;
     }
 }

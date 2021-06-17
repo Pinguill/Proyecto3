@@ -14,6 +14,7 @@ public abstract class Item : MonoBehaviour
 
     [HideInInspector]
     public GameObject Potion;
+    player jugador;
 
 
     public void itemUsage()
@@ -22,11 +23,13 @@ public abstract class Item : MonoBehaviour
             if( ID == 2){
                 healthPotion healthP = new healthPotion();
                 float vidaRepuesta = healthP.use();
+                jugador.curarse( vidaRepuesta );
+                
             }
-            else if(ID == 3){
-                ManaPotion ManaP = new ManaPotion();
-                float manaRepuesta = ManaP.use();
-            }
+        }else if (type == "Weapon"){
+            Espada espadaP = new Espada();
+            float danioExtra = espadaP.use();
+            jugador.danioExtra( danioExtra );
         }
     }
 

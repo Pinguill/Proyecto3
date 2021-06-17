@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cobra : Enemies
+public class cobra : MonoBehaviour
 {
     private bool FightEnabled;
     public float vidaMax;

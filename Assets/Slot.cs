@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Slot : MonoBehaviour
 {
@@ -27,6 +28,13 @@ public class Slot : MonoBehaviour
 
     public void useItem()
     {
+        item.GetComponent<Item>().itemUsage();
+        
+    }
 
+    public void onPointerClick(PointerEventData pointerEventData)
+    {
+        useItem();
+        Destroy(item);
     }
 }
